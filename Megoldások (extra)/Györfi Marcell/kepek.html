@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Képek</title>
+    <link rel="stylesheet" href="kepek.css">
+    <script src="kepek.js"></script>
+</head>
+<body>
+    <div id="vezerlok">
+        <select name="kepek" id="kepek" size="5" onchange="kepValaszt()">
+            <option value="inu.jpg">inu.jpg</option>
+            <option value="pitbull.jpg">pitbull.jpg</option>
+            <option value="spaniel.jpg">spaniel.jpg</option>
+            <option value="beagle.jpg">beagle.jpg</option>
+            <option value="schnauzer.jpg">schnauzer.jpg</option>
+        </select>
+        <div>
+            <input type="range" name="szelesseg" id="szelesseg" min="10" max="600" onchange="meretInput()">
+            <br>
+            <input type="range" name="magassag" id="magassag" min="10" max="600" onchange="meretInput()">
+            <br>
+            <select name="filterek" id="filterek" size="4" onchange="filterKivalaszt()">
+                <option value="blur(5px)">Blur</option>
+                <option value="opacity(30%)">Opacity</option>
+                <option value="grayscale(100%)">Grayscale</option>
+                <option value="sepia(100%">Sepia</option>
+            </select>
+            <select name="kivalasztott" id="kivalasztott" size="4" onchange="filterTorol()">
+            </select>
+        </div>
+    </div>
+    <div id="kepdiv">
+        <img id="kep" src="empty.png">
+    </div>
+</body>
+</html>

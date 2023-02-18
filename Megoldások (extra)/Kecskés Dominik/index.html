@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Érdekeltség</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="main">
+        <form id="kepek">
+            <select size="5">
+                <option value="a" onclick="kivalaszt(this)">a.png</option>
+                <option value="csillagaszat" onclick="kivalaszt(this)">csillagaszat.png</option>
+                <option value="csillagok" onclick="kivalaszt(this)">csillagok.png</option>
+                <option value="galaxis" onclick="kivalaszt(this)">galaxis.png</option>
+                <option value="galaxis2" onclick="kivalaszt(this)">galaxis2.png</option>
+            </select>
+    
+        </form>
+        <div id="slider">
+            <input onchange="meretvaltoztat()" type="range" value="200" min="100" max="400" id="szelesseg"><br>
+            <input onchange="meretvaltoztat()" type="range" value="200" min="100" max="400" id="magassag"><br>
+        </div>
+        <div id="opciok">
+            <form>
+                <select size="5" id="tarolt">
+                    <option value="blur(5px)" id="blur" onclick="valtoztatEffekt(this)">Blur</option>
+                    <option value="opacity(70%)" id="opacity" onclick="valtoztatEffekt(this)">Opacity</option>
+                    <option value="invert(100%)" id="invert" onclick="valtoztatEffekt(this)">Invert</option>
+                    <option value="sepia(100%)" id="sepia" onclick="valtoztatEffekt(this)">Sepia</option>
+                </select>
+                <select size="5" id="kivalasztott">
+                    
+                </select>
+            </form>
+        </div>
+    </div>
+    <div id="keptarol">
+        <img id="kep" src="images/x.png" width="100" height="100" filter="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
