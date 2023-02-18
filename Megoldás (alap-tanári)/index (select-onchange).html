@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Képek effektusai</title>
+</head>
+
+<body>
+    <div id="vezerloDiv">
+        <form action="">
+            <!--a) feladat-->
+            <select size="4" onchange="valaszt(this)">
+                <option value="AMDRyzen.png" selected>AMD Ryzen processzor</option>
+                <option value="Corei7.png">Intel Corei7 processzor</option>
+                <option value="Intel_i386DX_25.jpg">Intel 386DX 32 bites processzor
+                </option>
+                <option value="mos-6510-cpu.webp">Commodore 64 8 bites processzor</option>
+                <option value="Skylake.jpg">Intel Skylake</option>
+            </select>
+
+            <!--b) feladat-->
+            <label for="kep_magassag">Magasság</label>
+            <input type="range" min="10" max="600" id="kep_magassag" value="600" onchange="meretez()">
+
+            <label for="kep_szelesseg">Szélesség</label>
+            <input type="range" min="10" max="600" id="kep_szelesseg" value="600" onchange="meretez()">
+
+            <!--c) feladat-->
+            <label for="effect_blur">Elhomályosít</label>
+            <input type="checkbox" id="effect_blur" name="blur(5px)" onclick="effekt_Beallitas(this)">
+
+            <label for="effect_opacity">Áttetszővé tesz</label>
+            <input type="checkbox" id="effect_opacity" name="opacity(50%)" onclick="effekt_Beallitas(this)">
+        </form>
+    </div>
+
+    <div id="kepDIV">
+        <img src="images//AMDRyzen.png" id="kep" height="600px" width="600px">
+    </div>
+</body>
+
+</html>
